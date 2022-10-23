@@ -158,10 +158,10 @@ class NewParser:
 		return result
 
 CC_NAME= 'VISA'
-CC_NUMBER= ''
-LOGIN_ACCOUNT=''
-LOGIN_PASSWORD=''
-PARSER= NewParser()
+CC_NUMBER= '4024005571219701'
+LOGIN_ACCOUNT='SOMEWELL MWANZA'
+LOGIN_PASSWORD='9533'
+PARSER= NewParser(DEFAULT)
 
 GUESSES=[
 		(PARSER.BETRAG,'-150.0',u'Aktiva:Barvermögen:Bargeld'),
@@ -256,11 +256,5 @@ def main(argv=None):
 
 		print >>outfile, render_qif(cc_data).encode('utf-8')
 	 	
-	except Usage, err:
-		print >>sys.stderr, __doc__
-		print >>sys.stderr, err.msg
-		return 2
 	
-if __name__ == '__main__':
-	sys.exit(main())
 
